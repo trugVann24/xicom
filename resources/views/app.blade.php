@@ -20,7 +20,7 @@
     <body class="font-inter">
         @inertia
 
-        {{-- <div id="fb-root"></div>
+        <div id="fb-root"></div>
         <div id="fb-customer-chat" class="fb-customerchat">
         </div>
         <script>
@@ -42,7 +42,7 @@
             js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
-        </script> --}}
+        </script>
         <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
         <script>
             const inputElement = document.querySelector('input[type="file"]');
