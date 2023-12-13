@@ -33,11 +33,11 @@
                                 </div>
                             <div class="p-3">
                                 <h3 class="line-clamp-2 text-sm font-500 text-gray-600 mb-1">{{ product.name }} Nguyễn Trung Văn đây này</h3>
-                                <span class="px-3 py-[3px] bg-orange-100 text-orange-600 font-500 text-xs">giảm 5%</span>
+                                <!-- <span class="px-3 py-[3px] bg-orange-100 text-orange-600 font-500 text-xs">giảm 5%</span> -->
                                 <div class="flex items-center justify-between mt-4">
                                     <p class="text-pink-600 text-sm font-500">
                                         <span class="text-xs">đ</span>
-                                        {{ product.price }}
+                                        {{ formatCurrency(product.price) }}
                                     </p>
                                     <p class="text-gray-500 text-xs font-500">
                                         <span class="">Đã bán:</span>
@@ -86,4 +86,9 @@
 <script setup>
 import HomeLayout from '@/Layouts/HomeLayout.vue';
 import { Link } from '@inertiajs/vue3';
+const formatCurrency = ((value) => {
+    if (!value) return '';
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+});
 </script>
